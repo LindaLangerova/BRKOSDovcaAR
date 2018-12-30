@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Smlouvy-2" size="5.000000 2.747253" />
+    <ImageTarget name="Smlouvy-3" size="5.000000 3.074792" />
+    <ImageTarget name="Smlouvy-4" size="5.000000 2.638484" />
+    <ImageTarget name="Smlouvy-5" size="5.000000 2.963989" />
+    <ImageTarget name="Smlouvy-6" size="5.000000 2.922438" />
+    <ImageTarget name="Smlouvy-1" size="5.000000 3.000000" />
+    <ImageTarget name="capriodzus" size="5.000000 10.802603" />
+    <ImageTarget name="TriMarkG" size="4.000000 4.000000" />
+    <ImageTarget name="TriMarkF" size="4.000000 4.000000" />
+    <ImageTarget name="TriMarkE" size="4.000000 4.000000" />
+    <ImageTarget name="TriMarkD" size="4.000000 4.000000" />
+    <ImageTarget name="TriMarkC" size="4.000000 4.000000" />
+    <ImageTarget name="TriMarkB" size="4.000000 4.000000" />
+    <ImageTarget name="TriMarkA" size="4.000000 4.000000" />
+    <ImageTarget name="tekutaMacka" size="20.000000 13.796407" />
+    <ImageTarget name="Mmark" size="200.000000 200.000000" />
+  </Tracking>
+</QCARConfig>
