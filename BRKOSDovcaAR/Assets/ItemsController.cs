@@ -27,6 +27,7 @@ public class ItemsController : MonoBehaviour {
 
     private bool _shouldGetKufr;
     private string _kufrPosition;
+    private bool _wasKufrInBedroom = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -52,7 +53,9 @@ public class ItemsController : MonoBehaviour {
 
         if (_shouldGetKufr) {
             Debug.Log("Should get kufr = " + _shouldGetKufr);
-            _heldItems.Add(Items.KufrZabaleny);
+            if (!_wasKufrInBedroom) {
+                _heldItems.Add(Items.KufrZabaleny);
+            }
             _shouldGetKufr = false;
             HandleItemChange();
         }
@@ -69,7 +72,9 @@ public class ItemsController : MonoBehaviour {
             case Places.K_POKOJUM:
                 if (!_heldItems.Contains(Items.KufrRozbaleny) && _kufrPosition == Places.K_POKOJUM)
                 {
-                    _heldItems.Add(Items.KufrRozbaleny);
+                    if (!_wasKufrInBedroom) {
+                        _heldItems.Add(Items.KufrRozbaleny);
+                    }
                     HandleItemChange();
                 }
                 break;
@@ -77,8 +82,17 @@ public class ItemsController : MonoBehaviour {
             case Places.CHODBA:
                 if (!_heldItems.Contains(Items.KufrRozbaleny) && _kufrPosition == Places.CHODBA)
                 {
-                    _heldItems.Add(Items.KufrRozbaleny);
+                    if (!_wasKufrInBedroom) {
+                        _heldItems.Add(Items.KufrRozbaleny);
+                    }
                     HandleItemChange();
+                }
+                break;
+
+            case Places.POKOJ:
+                if (_heldItems.Contains(Items.KufrRozbaleny)) {
+                    _heldItems.Remove(Items.KufrRozbaleny);
+                    _wasKufrInBedroom = true;
                 }
                 break;
         }
